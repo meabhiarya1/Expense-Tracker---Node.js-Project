@@ -6,7 +6,7 @@ body {
     align-items: center;
     min-height: 100vh;
     background-color: #f5f5f5;
-    margin: 10;
+    margin: 0;
 }
 
 /* Container with a neumorphic look */
@@ -68,6 +68,44 @@ button {
     cursor: pointer;
     margin-top: 15px;
 }
+
+#forget-password {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff0000;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+
+
+    &:hover {
+        background-color: #ba232391;
+        /* Adjust hover color */
+    }
+}
+
+/* Target the anchor tag with the specified ID and class */
+#existing-user-button.link {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+
+
+    &:hover {
+        background-color: #0069d9;
+        /* Adjust hover color */
+    }
+}
+
 
 button:hover {
     background-color: #0069d9;
