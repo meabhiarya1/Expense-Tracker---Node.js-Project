@@ -1,6 +1,7 @@
 const User = require("../models/user");
 const bcrypt = require('bcrypt');
 const jwt = require("jsonwebtoken");
+require("dotenv").config();
 
 const isStringValid = (string) => {
     if (string == undefined || string.length === 0) {
@@ -11,8 +12,9 @@ const isStringValid = (string) => {
     }
 }
 
-const generateAccessToken = (id) => {
-    return jwt.sign({ userId: id }, 'secretkey')
+const generateAccessToken = (id, isPremium) => {
+    const token = jwt.sign({ userId: id, isPremium: isPremium }, process.env.TOKEN_SECRET)
+    return token;
 }
 
 exports.signup = async (req, res) => {
@@ -36,7 +38,6 @@ exports.signup = async (req, res) => {
     }
 }
 
-
 exports.login = async (req, res) => {
     try {
         const { email, password } = req.body;
@@ -52,7 +53,7 @@ exports.login = async (req, res) => {
                     throw new Error("Something went wrong")
                 }
                 if (compareResult === true) {
-                    res.status(200).json({ message: "User logged in Successfully", token: generateAccessToken(existingEmail[0].id) });
+                    res.status(200).json({ message: "User logged in Successfully", token: generateAccessToken(existingEmail[0].id, existingEmail[0].isPremium) });
                 } else if (password !== compareResult) {
                     return res.json({ message: "Password is incorrect" });
                 }
