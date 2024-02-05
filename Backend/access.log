@@ -35,3 +35,5 @@
 ::1 - - [05/Feb/2024:07:36:49 +0000] "GET /premium/showleaderboard HTTP/1.1" 200 561 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 ::1 - - [05/Feb/2024:07:36:51 +0000] "GET /premium/showleaderboard HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 ::1 - - [05/Feb/2024:07:36:56 +0000] "GET /premium/download HTTP/1.1" 200 171 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+::1 - - [05/Feb/2024:15:27:51 +0000] "GET /user/ispremiumuser HTTP/1.1" 202 4 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+::1 - - [05/Feb/2024:15:27:51 +0000] "POST /expenses/getexpenses HTTP/1.1" 200 986 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
